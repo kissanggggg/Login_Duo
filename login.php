@@ -13,7 +13,7 @@ and password = '$password'";
 $result=mysqli_query($conn, $sql);
 
 if(mysqli-num-rows($result) >0){
-    echo"";
+    echo"SUCCESS";
     exit();
 }
 else {
@@ -21,5 +21,6 @@ else {
 }
 
 mysqli_close($conn);
+
 
 ?>
