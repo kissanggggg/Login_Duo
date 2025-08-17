@@ -1,0 +1,19 @@
+<?php
+$conn = mysqli_connect ("localhost", "root", "psits");
+if (!$conn){
+    die("Wala na");
+}
+$email = $_POST['email'];
+
+$sql = "Select = from students where email = '$email' and password = '$password'";
+$result=mysqli_query($conn, $sql);
+
+if(mysqli_num_rows($conn, $sql) >0){
+    echo"SUCCESS";
+    exit();
+}
+else{
+    echo("wala na gid")
+}
+mysqli_close($conn);
+?>
