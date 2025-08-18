@@ -6,7 +6,8 @@ if (!$conn){
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$sql = "Select * from Students where email = '$email' and password = '$password'";
+$sql = "Select * from Students where email = '$email'
+and password = '$password'";
 
 $result=mysqli_query($conn, $sql);
 
@@ -20,6 +21,7 @@ else{
 mysqli_close($conn);
 
 ?>
+
 
 
 
