@@ -9,7 +9,7 @@ $sql = "Select = from students where email = '$email' and password = '$password'
 
 $result=mysqli_query($conn, $sql);
 
-if(mysqli_num_rows($conn, $sql) >0){
+if(mysqli_num_rows($result) >0){
     echo"SUCCESS";
     exit();
 }
@@ -19,3 +19,4 @@ else{
 mysqli_close($conn);
 
 ?>
+
