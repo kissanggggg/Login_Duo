@@ -6,6 +6,7 @@ if (!$conn){
 $email = $_POST['email'];
 
 $sql = "Select = from students where email = '$email' and password = '$password'";
+
 $result=mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($conn, $sql) >0){
@@ -13,7 +14,8 @@ if(mysqli_num_rows($conn, $sql) >0){
     exit();
 }
 else{
-    echo("wala na gid")
+    echo("Wala na gid")
 }
 mysqli_close($conn);
+
 ?>
