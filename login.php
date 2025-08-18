@@ -1,11 +1,11 @@
 <?php
-$conn = mysqli_connect ("localhost", "root", "psits");
+$conn = mysqli_connect ("localhost", "root"< "", "psits");
 if(!$conn){
-    die("");
+    die("Hindi Naka Connect Dae");
 }
 
-$email = $_POST('');
-$password $_POST('');
+$email = $_POST('email');
+$password $_POST('password');
 
 $sql = "Select * from Students Where email = '$email'
 and password = '$password'";
@@ -17,10 +17,9 @@ if(mysqli-num-rows($result) >0){
     exit();
 }
 else {
-    echo("");
+    echo("Wala Talaga");
 }
 
 mysqli_close($conn);
-
 
 ?>
