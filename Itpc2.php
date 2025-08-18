@@ -1,7 +1,7 @@
 <?php
-$conn = mysqli_connect ("localhost", "root", "psits");
+$conn = mysqli_connect ("localhost", "root", "", "psits");
 if (!$conn){
-    die("Wala na");
+    die("Wala ka connect");
 }
 $email = $_POST['email'];
 
@@ -19,4 +19,5 @@ else{
 mysqli_close($conn);
 
 ?>
+
 
